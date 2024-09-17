@@ -1,12 +1,12 @@
 import sys
 
-from schemas import Languages
-from models import Citation
-from database import SessionLocal
+from database.schemas import Languages
+from database.models import Citation
+from database.database import SessionLocal
 
-from french_citations import citations as french_citations
-from english_citations import citations as english_citations
-from spanish_citations import citations as spanish_citations
+from citations.french_citations import citations as french_citations
+from citations.english_citations import citations as english_citations
+from citations.spanish_citations import citations as spanish_citations
 
 def init_french_citations():
     db = SessionLocal()
