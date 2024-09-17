@@ -4,6 +4,22 @@ from sqlalchemy.orm import sessionmaker
 
 import os
 
+print("#"*100)
+print("*"*100)
+print("#"*100)
+
+print("\n")
+print(f'DB_USER = {os.environ.get("DB_USER")}')
+print(f'DB_PASS = {os.environ.get("DB_PASS")}')
+print(f'DB_HOST = {os.environ.get("DB_HOST")}')
+print(f'DB_NAME = {os.environ.get("DB_NAME")}')
+print("\n")
+
+print("#"*100)
+print("*"*100)
+print("#"*100)
+
+
 connection_string = URL.create(
     'postgresql',
     username=os.environ.get("DB_USER"),
