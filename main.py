@@ -1,10 +1,10 @@
 from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
 
-from schemas import Languages, Citation
-from crud import get_citation
-from models import Base
-from database import SessionLocal, engine
+from database.schemas import Languages, Citation
+from database.crud import get_citation
+from database.models import Base
+from database.database import SessionLocal, engine
 
 Base.metadata.create_all(bind=engine)
 

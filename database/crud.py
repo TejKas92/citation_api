@@ -2,8 +2,8 @@ from sqlalchemy.orm import Session
 
 import random
 
-from models import Citation
-from schemas import Languages
+from .models import Citation
+from .schemas import Languages
 
 def get_citation(db: Session, language: Languages):
     citations = db.query(Citation).filter(Citation.language == language)
